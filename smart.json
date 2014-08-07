@@ -1,0 +1,8 @@
+{
+    "name": "yagni-log",
+    "description": "Light wrapper (and shorthand) for console.log",
+    "homepage": "https://github.com/DanielDornhardt/yagni-log",
+    "author": "Daniel Dornhardt <daniel@dornhardt.com> (http://www.dornhardt.com)",
+    "version": "0.1.0",
+    "git": "git@github.com:DanielDornhardt/yagni-log.git"
+}
