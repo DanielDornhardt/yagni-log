@@ -2,7 +2,7 @@ Package.describe({
   summary: "Simple log method for client and server.",
   homepage: "https://github.com/DanielDornhardt/yagni-log",
   author: "Daniel Dornhardt <daniel@dornhardt.com> (http://www.dornhardt.com)",
-  version: "1.0.0",
+  version: "1.0.2",
   git: "https://github.com/DanielDornhardt/yagni-log.git"
 });
 
