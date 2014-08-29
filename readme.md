@@ -1,4 +1,4 @@
-yagni-log
+yagni:log
 ===
 
 Usage
@@ -13,7 +13,7 @@ Make sure to have installed the meteorite package manager for Meteor (see https:
 
 To install:
 
-    mrt add yagni-log
+    mrt add yagni:log
 
 Synopsis
 ---
