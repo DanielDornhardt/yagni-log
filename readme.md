@@ -1,10 +1,20 @@
 yagni:log
 ===
 
+A simple log command to be able to call log('something') on both the client, the server and as a template helper
+
 Usage
 ---
 
 log('inside coolFunc',this,arguments);
+
+or in a meteor template:
+
+<template name="whatsGoingOnHere">
+    {{log this .. someProperty}}
+</template>
+
+(For the templates, the logging will happen to the client js console as well.)
 
 Installation
 ---
