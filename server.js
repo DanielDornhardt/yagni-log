@@ -1,7 +1,7 @@
 Meteor.methods({
-  debug: function() {
+  log: function() {
     var result = false;
-    if(process.env.DEBUG == "true") {
+    if(process.env.LOG == "true") {
       result = true;
     }
     return result;

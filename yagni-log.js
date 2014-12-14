@@ -11,11 +11,11 @@ log = function() {
 
   if(this.console) {
     if (Meteor && Meteor.isServer) {
-      if (process.env.DEBUG == "true") {
+      if (process.env.LOG == "true") {
         console.log.apply(this, Array.prototype.slice.call(args));
       }
     } else {
-      Meteor.call("debug", function (error, result) {
+      Meteor.call("log", function (error, result) {
         if (result) {
           console.log( Array.prototype.slice.call(args) );
         }
