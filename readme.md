@@ -20,6 +20,7 @@ or in a meteor template:
 Startup
 ---
 
+    LOG=true meteor
 
 
 Installation
