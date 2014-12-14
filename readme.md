@@ -16,6 +16,13 @@ or in a meteor template:
 
 (For the templates, the logging will happen to the client js console as well.)
 
+
+Startup
+---
+
+    LOG=true meteor
+
+
 Installation
 ---
 
@@ -23,7 +30,7 @@ Make sure to have installed the meteorite package manager for Meteor (see https:
 
 To install:
 
-    mrt add yagni:log
+    meteor add yagni:log
 
 Synopsis
 ---

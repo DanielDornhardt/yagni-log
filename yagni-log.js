@@ -4,22 +4,30 @@
 // NOTE: Always wraps the given arguments in an array for better content formatting in the
 // different browsers' consoles! Don't be surprised!
 log = function() {
-    log.history = log.history || [];   // store logs to an array for reference
-    log.history.push(arguments);
 
-    if(this.console){
-        if (Meteor && Meteor.isServer) {
-            console.log.apply(this, Array.prototype.slice.call(arguments));
-        } else {
-            console.log( Array.prototype.slice.call(arguments) );
+  var args = arguments;
+  log.history = log.history || [];   // store logs to an array for reference
+  log.history.push(args);
+
+  if(this.console) {
+    if (Meteor && Meteor.isServer) {
+      if (process.env.LOG == "true") {
+        console.log.apply(this, Array.prototype.slice.call(args));
+      }
+    } else {
+      Meteor.call("log", function (error, result) {
+        if (result) {
+          console.log( Array.prototype.slice.call(args) );
         }
+      });
     }
+  }
 };
-
+  
 if (Meteor.isClient) {
-    Meteor.startup(function(){
-        Template.registerHelper('log', function(){
-            log(arguments);
-        });
+  Meteor.startup(function(){
+    Template.registerHelper('log', function(){
+      log(arguments);
     });
+  });
 }
