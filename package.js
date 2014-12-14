@@ -11,4 +11,5 @@ Package.onUse(function(api) {
   api.versionsFrom('METEOR@0.9.0.1');
   api.export('log');
   api.addFiles('yagni-log.js');
+  api.addFiles('server.js','server');
 });
