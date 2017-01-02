@@ -1,29 +1,36 @@
 yagni:log
 ===
 
-A simple log command to be able to call log('something') on both the client, the server and as a template helper
+A simple `log` command to be able to call `log('something')` on both the client, the server and as a template helper.
+Also adds a `logDeep(deepObject)` command to quickly inspect deep objects on the servers's console.
 
 Usage
 ---
 
+```
 log('inside coolFunc',this,arguments);
+logDeep('look at several deep objects on server console',deepObject1,deepObject2);  // on the server
+```
 
 or in a meteor template:
 
+```
 <template name="whatsGoingOnHere">
     {{log this .. someProperty}}
 </template>
+```
 
 (For the templates, the logging will happen to the client js console as well.)
+
 
 Installation
 ---
 
-Make sure to have installed the meteorite package manager for Meteor (see https://github.com/oortcloud/meteorite/)
-
 To install:
 
-    mrt add yagni:log
+```
+meteor add yagni:log
+```
 
 Synopsis
 ---
