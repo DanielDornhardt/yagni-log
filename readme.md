@@ -9,7 +9,7 @@ Usage
 
 ```
 log('inside coolFunc',this,arguments);
-logDeep('look at several deep objects on server console',deepObject1,deepObject2);  // on the server
+logDeep('look at several deep objects on server console',deepObject1,deepObject2);
 ```
 
 or in a meteor template:
